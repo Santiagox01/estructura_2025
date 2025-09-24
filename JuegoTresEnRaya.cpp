@@ -2,9 +2,15 @@
 #include <vector>
 using namespace std;
 
-// Tres en raya sencillo en C++ con clase Playerqq
-ErrorDePrueba
+// Clase para manejar colores en consola (ANSI)
+class Color {
+public:
+    static string rojo(const string& txt)   { return "\033[31m" + txt + "\033[0m"; }
+    static string azul(const string& txt)   { return "\033[34m" + txt + "\033[0m"; }
+    static string reset() { return "\033[0m"; }
+};
 
+// Clase Player
 class Player {
 public:
     char symbol;
@@ -28,14 +34,17 @@ public:
 void printBoard(const vector<char>& board) {
     cout << "\n";
     for (int i = 0; i < 9; i++) {
-        cout << (board[i] == ' ' ? char('1' + i) : board[i]);
+        string cell;
+        if (board[i] == 'X') cell = Color::rojo("X");
+        else if (board[i] == 'O') cell = Color::azul("O");
+        else cell = string(1, '1' + i);
+
+        cout << cell;
         if (i % 3 != 2) cout << " | ";
         if (i % 3 == 2 && i < 8) cout << "\n---------\n";
     }
     cout << "\n\n";
 }
-
-//
 
 bool checkWin(const vector<char>& b, char p) {
     int wins[8][3] = {
@@ -61,7 +70,8 @@ int main() {
     Player p2('O', "Jugador 2");
     Player* current = &p1;
 
-    cout << "=== Tres en raya con clase Player ===\n";
+    cout << "=== Tres en raya con colores ===\n";
+    cout << Color::rojo("X = Jugador 1") << " | " << Color::azul("O = Jugador 2") << "\n";
 
     while (true) {
         printBoard(board);
