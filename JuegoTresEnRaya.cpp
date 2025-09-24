@@ -2,7 +2,27 @@
 #include <vector>
 using namespace std;
 
-// Tres en raya sencillo en C++
+// Tres en raya sencillo en C++ con clase Player
+
+class Player {
+public:
+    char symbol;
+    string name;
+
+    Player(char s, string n) : symbol(s), name(n) {}
+
+    int makeMove(const vector<char>& board) {
+        int move;
+        while (true) {
+            cout << name << " (" << symbol << ") elige una casilla (1-9): ";
+            cin >> move;
+            if (move >= 1 && move <= 9 && board[move-1] == ' ') {
+                return move - 1;
+            }
+            cout << "Movimiento inválido. Intenta de nuevo.\n";
+        }
+    }
+};
 
 void printBoard(const vector<char>& board) {
     cout << "\n";
@@ -34,23 +54,20 @@ bool boardFull(const vector<char>& b) {
 
 int main() {
     vector<char> board(9, ' ');
-    char turn = 'X';
+    Player p1('X', "Jugador 1");
+    Player p2('O', "Jugador 2");
+    Player* current = &p1;
 
-    cout << "=== Tres en raya sencillo ===\n";
+    cout << "=== Tres en raya con clase Player ===\n";
 
     while (true) {
         printBoard(board);
-        cout << "Turno de " << turn << ". Elige una casilla (1-9): ";
-        int move; cin >> move;
-        if (move < 1 || move > 9 || board[move-1] != ' ') {
-            cout << "Movimiento inválido. Intenta de nuevo.\n";
-            continue;
-        }
-        board[move-1] = turn;
+        int move = current->makeMove(board);
+        board[move] = current->symbol;
 
-        if (checkWin(board, turn)) {
+        if (checkWin(board, current->symbol)) {
             printBoard(board);
-            cout << "Jugador " << turn << " gana!\n";
+            cout << current->name << " gana!\n";
             break;
         }
         if (boardFull(board)) {
@@ -58,8 +75,7 @@ int main() {
             cout << "Empate!\n";
             break;
         }
-        turn = (turn == 'X') ? 'O' : 'X';
+        current = (current == &p1) ? &p2 : &p1;
     }
     return 0;
 }
-
