@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-// Tres en raya sencillo en C++ con clase Player
+// Tres en raya sencillo en C++ con clase Playerqq
 
 class Player {
 public:
