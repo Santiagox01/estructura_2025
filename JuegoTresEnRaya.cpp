@@ -4,6 +4,7 @@ using namespace std;
 
 // Tres en raya sencillo en C++ con clase Playerqq
 ErrorDePrueba
+
 class Player {
 public:
     char symbol;
