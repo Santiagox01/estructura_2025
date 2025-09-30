@@ -1,12 +1,13 @@
 #include <iostream>
 #include <vector>
+#include <cstdlib> // Para la opción de reiniciar el juego
 using namespace std;
 
 // Clase para manejar colores en consola (ANSI)
 class Color {
 public:
-    static string rojo(const string& txt)   { return "\033[31m" + txt + "\033[0m"; }
-    static string azul(const string& txt)   { return "\033[34m" + txt + "\033[0m"; }
+    static string rojo(const string& txt) { return "\033[31m" + txt + "\033[0m"; }
+    static string azul(const string& txt) { return "\033[34m" + txt + "\033[0m"; }
     static string reset() { return "\033[0m"; }
 };
 
@@ -37,7 +38,7 @@ void printBoard(const vector<char>& board) {
         string cell;
         if (board[i] == 'X') cell = Color::rojo("X");
         else if (board[i] == 'O') cell = Color::azul("O");
-        else cell = string(1, '1' + i);
+        else cell = string(1, '1' + i);  // Mostrar números en casillas vacías
 
         cout << cell;
         if (i % 3 != 2) cout << " | ";
@@ -64,6 +65,10 @@ bool boardFull(const vector<char>& b) {
     return true;
 }
 
+void resetBoard(vector<char>& board) {
+    fill(board.begin(), board.end(), ' ');  // Reinicia el tablero
+}
+
 int main() {
     vector<char> board(9, ' ');
     Player p1('X', "Jugador 1");
@@ -73,22 +78,43 @@ int main() {
     cout << "=== Tres en raya con colores ===\n";
     cout << Color::rojo("X = Jugador 1") << " | " << Color::azul("O = Jugador 2") << "\n";
 
-    while (true) {
-        printBoard(board);
-        int move = current->makeMove(board);
-        board[move] = current->symbol;
+    do {
+        while (true) {
+            printBoard(board);  // Imprime el tablero
+            cout << "Turno de " << current->name << " (" << current->symbol << ").\n";
 
-        if (checkWin(board, current->symbol)) {
-            printBoard(board);
-            cout << current->name << " gana!\n";
+            int move = current->makeMove(board);  // El jugador elige su movimiento
+            board[move] = current->symbol;  // Marca la casilla
+
+            if (checkWin(board, current->symbol)) {  // Verifica si el jugador ha ganado
+                printBoard(board);
+                cout << current->name << " gana!\n";
+                break;
+            }
+            if (boardFull(board)) {  // Verifica si el tablero está lleno (empate)
+                printBoard(board);
+                cout << "Empate!\n";
+                break;
+            }
+
+            // Cambia el turno
+            current = (current == &p1) ? &p2 : &p1;
+        }
+
+        // Preguntar si se quiere jugar otra ronda
+        char playAgain;
+        cout << "¿Quieres jugar otra ronda? (s/n): ";
+        cin >> playAgain;
+        if (playAgain == 's' || playAgain == 'S') {
+            resetBoard(board);  // Reinicia el tablero
+            current = &p1;  // Reinicia el turno
+            cout << "\nNueva ronda...\n\n";
+        } else {
+            cout << "¡Gracias por jugar! Adiós.\n";
             break;
         }
-        if (boardFull(board)) {
-            printBoard(board);
-            cout << "Empate!\n";
-            break;
-        }
-        current = (current == &p1) ? &p2 : &p1;
-    }
+
+    } while (true);
+
     return 0;
 }
