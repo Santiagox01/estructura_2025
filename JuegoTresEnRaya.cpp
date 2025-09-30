@@ -1,14 +1,10 @@
 #include <iostream>
 #include <vector>
+#iclude <Color>
 using namespace std;
 
 // Clase para manejar colores en consola (ANSI)
-class Color {
-public:
-    static string rojo(const string& txt)   { return "\033[31m" + txt + "\033[0m"; }
-    static string azul(const string& txt)   { return "\033[34m" + txt + "\033[0m"; }
-    static string reset() { return "\033[0m"; }
-};
+
 
 // Clase Player
 class Player {
