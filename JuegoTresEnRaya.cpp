@@ -1,36 +1,10 @@
 #include <iostream>
 #include <vector>
-#include <cstdlib> // Para la opción de reiniciar el juego
+#include <algorithm>
+#include "Color.h"
+#include "Player.h"
+
 using namespace std;
-
-// Clase para manejar colores en consola (ANSI)
-class Color {
-public:
-    static string rojo(const string& txt) { return "\033[31m" + txt + "\033[0m"; }
-    static string azul(const string& txt) { return "\033[34m" + txt + "\033[0m"; }
-    static string reset() { return "\033[0m"; }
-};
-
-// Clase Player
-class Player {
-public:
-    char symbol;
-    string name;
-
-    Player(char s, string n) : symbol(s), name(n) {}
-
-    int makeMove(const vector<char>& board) {
-        int move;
-        while (true) {
-            cout << name << " (" << symbol << ") elige una casilla (1-9): ";
-            cin >> move;
-            if (move >= 1 && move <= 9 && board[move-1] == ' ') {
-                return move - 1;
-            }
-            cout << "Movimiento inválido. Intenta de nuevo.\n";
-        }
-    }
-};
 
 void printBoard(const vector<char>& board) {
     cout << "\n";
@@ -105,6 +79,7 @@ int main() {
         char playAgain;
         cout << "¿Quieres jugar otra ronda? (s/n): ";
         cin >> playAgain;
+        cin.ignore(1000, '\n'); // Limpiar buffer
         if (playAgain == 's' || playAgain == 'S') {
             resetBoard(board);  // Reinicia el tablero
             current = &p1;  // Reinicia el turno
