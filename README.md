@@ -10,6 +10,7 @@ Compila todos los archivos (main.cpp, Player.cpp, Player.h, Color.h).
 El juego es para dos jugadores.
 El Jugador 1 (X) siempre inicia, seguido del Jugador 2 (O).
 Cada jugador selecciona una casilla (1–9) según la siguiente disposición:
+
 1 | 2 | 3
 ---------
 4 | 5 | 6
@@ -32,3 +33,4 @@ Estudiantes del ITM
 S
 J
 Y
+
