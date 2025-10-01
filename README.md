@@ -1,21 +1,34 @@
 #JuegoTresEnRaya
-descripcion jasjdjajsdasjkdaksjdaskjl
+Un clásico Tres en Raya (Tic-Tac-Toe) en consola, implementado en C++, con soporte de colores en terminal para diferenciar a los jugadores.
 
-
-##Intalacion
-Descomprimir la carpeta
-Abres la carpeta en tu IDE y compilaror de preferencia con soporte en C++ (Pueder DEV C++)
+##Instalación
+Descarga o clona el repositorio.
+Abre la carpeta en tu IDE/compilador favorito con soporte para C++ (por ejemplo: Dev-C++, Code::Blocks, Visual Studio Code).
+Compila todos los archivos (main.cpp, Player.cpp, Player.h, Color.h).
 
 #Uso
-#Existen dos jugaroes por turno primero empieza la X (Jugador 1) y selecciona una casilla (1-9)
-|1|2|3|
-|4|5|6|
-|7|8|9|
+El juego es para dos jugadores.
+El Jugador 1 (X) siempre inicia, seguido del Jugador 2 (O).
+Cada jugador selecciona una casilla (1–9) según la siguiente disposición:
+1 | 2 | 3
+---------
+4 | 5 | 6
+---------
+7 | 8 | 9
 
-#contribuciones
-Para contribuir ontactar a @Santiagox01
+El primero en conseguir tres en línea (horizontal, vertical o diagonal) gana.
+Si el tablero se llena y nadie gana, la partida termina en empate.
+Al finalizar, puedes decidir si juegas otra ronda o sales del juego.
 
-#Desarrollado por Estduiantes del itm
--S
--J
--Y
+#Colores en terminal
+Jugador 1 (X) → Se muestra en rojo.
+Jugador 2 (O) → Se muestra en azul.
+
+#Contribuciones
+Si deseas mejorar el proyecto, puedes contactar a @Santiagox01.
+
+#Desarrollado por
+Estudiantes del ITM
+S
+J
+Y
