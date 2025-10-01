@@ -24,8 +24,8 @@ Si el tablero se llena y nadie gana, la partida termina en empate.
 Al finalizar, puedes decidir si juegas otra ronda o sales del juego.
 
 #Colores en terminal
-Jugador 1 (X) → Se muestra en rojo.
-Jugador 2 (O) → Se muestra en azul.
+Jugador 1 (X) Se muestra en rojo.
+Jugador 2 (O) Se muestra en azul.
 
 #Contribuciones
 Si deseas mejorar el proyecto, puedes contactar a @Santiagox01.
@@ -35,5 +35,6 @@ Estudiantes del ITM
 S
 J
 Y
+
 
 
