@@ -11,11 +11,13 @@ El juego es para dos jugadores.
 El Jugador 1 (X) siempre inicia, seguido del Jugador 2 (O).
 Cada jugador selecciona una casilla (1–9) según la siguiente disposición:
 
+
 1 | 2 | 3
----------
+
 4 | 5 | 6
----------
+
 7 | 8 | 9
+
 
 El primero en conseguir tres en línea (horizontal, vertical o diagonal) gana.
 Si el tablero se llena y nadie gana, la partida termina en empate.
@@ -33,4 +35,5 @@ Estudiantes del ITM
 S
 J
 Y
+
 
