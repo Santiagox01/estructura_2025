@@ -9,3 +9,5 @@ public:
     static string azul(const string& txt) { return "\033[34m" + txt + "\033[0m"; }
     static string reset() { return "\033[0m"; }
 };
+
+#endif
