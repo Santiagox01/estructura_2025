@@ -28,13 +28,14 @@ Jugador 1 (X) Se muestra en rojo.
 Jugador 2 (O) Se muestra en azul.
 
 Contribuciones:
-Si deseas mejorar el proyecto, puedes contactar a @Santiagox01, 
+Si deseas mejorar el proyecto, puedes contactar a @Santiagox01, YForondaa o jaiderehaco-eng
 
 #Desarrollado por
 Estudiantes del ITM:
 - Santiago Jaramillo valencia
 - Yenifer Foronda Hernandez
 - Jayder Alejanro Arias Arango
+
 
 
 
