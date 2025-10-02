@@ -5,7 +5,7 @@ Ideal para aprender conceptos básicos de programación en C++, manejo de clases
 
 1. Clona o descarga este repositorio:
 
- git clone https://github.com/usuario/JuegoTresEnRaya.git
+ git clone https://github.com/Santiagox01/estructura_2025
 
 
 2. Abre la carpeta en tu IDE/compilador C++ favorito, por ejemplo:
@@ -79,6 +79,7 @@ Santiago Jaramillo Valencia
 Yenifer Foronda Hernández
 
 Jayder Alejandro Arias Arango
+
 
 
 
