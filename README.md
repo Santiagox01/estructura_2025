@@ -1,40 +1,86 @@
-JuegoTresEnRaya
-Un clásico Tres en Raya en consola, implementado en C++, con soporte de colores en terminal para diferenciar a los jugadores.
+---Un clásico Tres en Raya para consola, desarrollado en C++, con soporte de colores en la terminal para diferenciar a los jugadores.
+Ideal para aprender conceptos básicos de programación en C++, manejo de clases y colores en consola.----
 
-Instalación:
-Descarga o clona el repositorio.
-Abre la carpeta en tu IDE/compilador favorito con soporte para C++ (por ejemplo: Dev-C++, Code::Blocks, Visual Studio Code).
-Compila todos los archivos (main.cpp, Player.cpp, Player.h, Color.h).
+--Instalación--
 
-Uso:
-El juego es para dos jugadores.
-El Jugador 1 (X) siempre inicia, seguido del Jugador 2 (O).
-Cada jugador selecciona una casilla (1–9) según la siguiente disposición:
+1. Clona o descarga este repositorio:
+
+git clone https://github.com/usuario/JuegoTresEnRaya.git
 
 
-1 | 2 | 3
+2. Abre la carpeta en tu IDE/compilador C++ favorito, por ejemplo:
 
-4 | 5 | 6
+Dev-C++
 
-7 | 8 | 9
+Code::Blocks
+
+Visual Studio Code
+
+3. Compila los archivos principales:
+
+main.cpp
+
+Player.cpp
+
+Player.h
+
+Color.h
+
+###Asegúrate de que tu compilador soporte C++11 o superior.###
+
+--Uso--
+
+1. Ejecuta el programa compilado.
+
+2. El juego es para dos jugadores:
+
+Jugador 1 (X) comienza siempre.
+
+Jugador 2 (O) juega después.
+
+3. Cada jugador elige una casilla (del 1 al 9) según la siguiente disposición:
+
+ 1 | 2 | 3
+-----------
+ 4 | 5 | 6
+-----------
+ 7 | 8 | 9
 
 
-El primero en conseguir tres en línea (horizontal, vertical o diagonal) gana.
-Si el tablero se llena y nadie gana, la partida termina en empate.
-Al finalizar, puedes decidir si juegas otra ronda o sales del juego.
+4. Gana quien logre alinear tres símbolos (horizontal, vertical o diagonal).
 
-Colores en terminal:
-Jugador 1 (X) Se muestra en rojo.
-Jugador 2 (O) Se muestra en azul.
+5. Si el tablero se llena y nadie gana, el resultado es empate.
 
-Contribuciones:
-Si deseas mejorar el proyecto, puedes contactar a @Santiagox01, YForondaa o jaiderehaco-eng
+6. Al finalizar, podrás elegir jugar otra ronda o salir del juego.
 
-#Desarrollado por
+--Colores en Terminal--
+
+🟥 Jugador 1 (X): Rojo
+
+🟦 Jugador 2 (O): Azul
+
+Esto facilita la identificación de los turnos durante la partida.
+
+--Contribuciones--
+
+¡Las contribuciones son bienvenidas!
+Si deseas mejorar el proyecto, contacta a:
+
+@Santiagox01
+
+@YForondaa
+
+@jaiderehaco-eng
+
+---Desarrollado por---
+
 Estudiantes del ITM:
-- Santiago Jaramillo valencia
-- Yenifer Foronda Hernandez
-- Jayder Alejanro Arias Arango
+
+Santiago Jaramillo Valencia
+
+Yenifer Foronda Hernández
+
+Jayder Alejandro Arias Arango
 
 
 
