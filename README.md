@@ -1,12 +1,12 @@
-#JuegoTresEnRaya
+JuegoTresEnRaya
 Un clásico Tres en Raya en consola, implementado en C++, con soporte de colores en terminal para diferenciar a los jugadores.
 
-##Instalación
+Instalación:
 Descarga o clona el repositorio.
 Abre la carpeta en tu IDE/compilador favorito con soporte para C++ (por ejemplo: Dev-C++, Code::Blocks, Visual Studio Code).
 Compila todos los archivos (main.cpp, Player.cpp, Player.h, Color.h).
 
-#Uso
+Uso:
 El juego es para dos jugadores.
 El Jugador 1 (X) siempre inicia, seguido del Jugador 2 (O).
 Cada jugador selecciona una casilla (1–9) según la siguiente disposición:
@@ -23,18 +23,19 @@ El primero en conseguir tres en línea (horizontal, vertical o diagonal) gana.
 Si el tablero se llena y nadie gana, la partida termina en empate.
 Al finalizar, puedes decidir si juegas otra ronda o sales del juego.
 
-#Colores en terminal
+Colores en terminal:
 Jugador 1 (X) Se muestra en rojo.
 Jugador 2 (O) Se muestra en azul.
 
-#Contribuciones
-Si deseas mejorar el proyecto, puedes contactar a @Santiagox01.
+Contribuciones:
+Si deseas mejorar el proyecto, puedes contactar a @Santiagox01, 
 
 #Desarrollado por
 Estudiantes del ITM:
 - Santiago Jaramillo valencia
 - Yenifer Foronda Hernandez
 - Jayder Alejanro Arias Arango
+
 
 
 
