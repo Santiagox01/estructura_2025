@@ -45,6 +45,7 @@ Ideal para aprender conceptos básicos de programación en C++, manejo de clases
  4 | 5 | 6
  ---------
  7 | 8 | 9
+ ---------
 
 
 4. Gana quien logre alinear tres símbolos (horizontal, vertical o diagonal).
@@ -81,6 +82,7 @@ Santiago Jaramillo Valencia
 Yenifer Foronda Hernández
 
 Jayder Alejandro Arias Arango
+
 
 
 
