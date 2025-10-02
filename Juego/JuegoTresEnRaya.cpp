@@ -54,7 +54,7 @@ int main() {
     cout << "=== Tres en raya con colores ===\n";
     cout << Color::rojo("X = Jugador 1") << " | " << Color::azul("O = Jugador 2") << "\n";
     
-    // Menú para que el usuario elija su símbolo
+    // Menú 
     do {
         cout << "Elige tu símbolo (X o O): ";
         cin >> userChoice;
