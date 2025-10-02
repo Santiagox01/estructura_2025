@@ -41,9 +41,7 @@ Ideal para aprender conceptos básicos de programación en C++, manejo de clases
 3. Cada jugador elige una casilla (del 1 al 9) según la siguiente disposición:
 
  1 | 2 | 3
------------
  4 | 5 | 6
------------
  7 | 8 | 9
 
 
@@ -81,6 +79,7 @@ Santiago Jaramillo Valencia
 Yenifer Foronda Hernández
 
 Jayder Alejandro Arias Arango
+
 
 
 
