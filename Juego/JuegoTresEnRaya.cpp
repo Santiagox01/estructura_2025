@@ -47,10 +47,38 @@ int main() {
     vector<char> board(9, ' ');
     Player p1('X', "Jugador 1");
     Player p2('O', "Jugador 2");
-    Player* current = &p1;
+
+    char userChoice;
+    Player* current;
 
     cout << "=== Tres en raya con colores ===\n";
     cout << Color::rojo("X = Jugador 1") << " | " << Color::azul("O = Jugador 2") << "\n";
+    
+    // Menú para que el usuario elija su símbolo
+    do {
+        cout << "Elige tu símbolo (X o O): ";
+        cin >> userChoice;
+        cin.ignore(1000, '\n');  // Limpiar buffer
+        userChoice = toupper(userChoice);  // Convertir a mayúscula para evitar errores de entrada
+
+        if (userChoice == 'X') {
+            p1.symbol = 'X';
+            p2.symbol = 'O';
+            p1.name = "Jugador 1";
+            p2.name = "Jugador 2";
+            current = &p1;  // El jugador 1 comienza
+        }
+        else if (userChoice == 'O') {
+            p1.symbol = 'O';
+            p2.symbol = 'X';
+            p1.name = "Jugador 2";
+            p2.name = "Jugador 1";
+            current = &p2;  // El jugador 2 comienza
+        }
+        else {
+            cout << "Opción inválida, por favor elige X o O.\n";
+        }
+    } while (userChoice != 'X' && userChoice != 'O');
 
     do {
         while (true) {
@@ -82,7 +110,7 @@ int main() {
         cin.ignore(1000, '\n'); // Limpiar buffer
         if (playAgain == 's' || playAgain == 'S') {
             resetBoard(board);  // Reinicia el tablero
-            current = &p1;  // Reinicia el turno
+            current = (current == &p1) ? &p1 : &p2;  // Cambia el jugador que comienza
             cout << "\nNueva ronda...\n\n";
         } else {
             cout << "¡Gracias por jugar! Adiós.\n";
