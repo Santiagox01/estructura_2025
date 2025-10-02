@@ -5,26 +5,26 @@ Ideal para aprender conceptos básicos de programación en C++, manejo de clases
 
 1. Clona o descarga este repositorio:
 
-git clone https://github.com/usuario/JuegoTresEnRaya.git
+ git clone https://github.com/usuario/JuegoTresEnRaya.git
 
 
 2. Abre la carpeta en tu IDE/compilador C++ favorito, por ejemplo:
 
-Dev-C++
+ Dev-C++
 
-Code::Blocks
+ Code::Blocks
 
-Visual Studio Code
+ Visual Studio Code
 
 3. Compila los archivos principales:
 
-main.cpp
+ main.cpp
 
-Player.cpp
+ Player.cpp
 
-Player.h
+ Player.h
 
-Color.h
+ Color.h
 
 ###Asegúrate de que tu compilador soporte C++11 o superior.###
 
@@ -34,9 +34,9 @@ Color.h
 
 2. El juego es para dos jugadores:
 
-Jugador 1 (X) comienza siempre.
+  Jugador 1 (X) comienza siempre.
 
-Jugador 2 (O) juega después.
+  Jugador 2 (O) juega después.
 
 3. Cada jugador elige una casilla (del 1 al 9) según la siguiente disposición:
 
@@ -81,6 +81,7 @@ Santiago Jaramillo Valencia
 Yenifer Foronda Hernández
 
 Jayder Alejandro Arias Arango
+
 
 
 
