@@ -1,5 +1,5 @@
 #JuegoTresEnRaya
-Un clásico Tres en Raya (Tic-Tac-Toe) en consola, implementado en C++, con soporte de colores en terminal para diferenciar a los jugadores.
+Un clásico Tres en Raya en consola, implementado en C++, con soporte de colores en terminal para diferenciar a los jugadores.
 
 ##Instalación
 Descarga o clona el repositorio.
@@ -31,10 +31,12 @@ Jugador 2 (O) Se muestra en azul.
 Si deseas mejorar el proyecto, puedes contactar a @Santiagox01.
 
 #Desarrollado por
-Estudiantes del ITM
-S
-J
-Y
+Estudiantes del ITM:
+- Santiago Jaramillo valencia
+- Yenifer Foronda Hernandez
+- Jayder Alejanro Arias Arango
+
+
 
 
 
