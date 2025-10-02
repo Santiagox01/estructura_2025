@@ -1,5 +1,5 @@
----Un clásico Tres en Raya para consola, desarrollado en C++, con soporte de colores en la terminal para diferenciar a los jugadores.
-Ideal para aprender conceptos básicos de programación en C++, manejo de clases y colores en consola.----
+Un clásico Tres en Raya para consola, desarrollado en C++, con soporte de colores en la terminal para diferenciar a los jugadores.
+Ideal para aprender conceptos básicos de programación en C++, manejo de clases y colores en consola.
 
 --Instalación--
 
@@ -79,6 +79,7 @@ Santiago Jaramillo Valencia
 Yenifer Foronda Hernández
 
 Jayder Alejandro Arias Arango
+
 
 
 
