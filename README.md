@@ -1,4 +1,4 @@
-# Tres en Raya con Colores
+# Juego Tres en Raya
 
 Un clásico Tres en Raya para consola, desarrollado en C++, con soporte de colores en la terminal para diferenciar a los jugadores.
 
