@@ -79,6 +79,89 @@ make
 
 ---
 
+## Arquitectura del Proyecto
+
+### Clases Principales
+
+#### **MenuController**
+- **Responsabilidad**: Gestiona el menú principal y la navegación del juego
+- **Métodos principales**:
+  - `showMainMenu()`: Muestra el menú principal con 5 opciones
+  - `showInstructions()`: Muestra las instrucciones del juego
+  - `handleNewGame()`: Inicia una nueva partida
+  - `handleLoadGame()`: Carga una partida guardada
+  - `run()`: Ejecuta el loop principal del menú
+
+#### **GameSession**
+- **Responsabilidad**: Maneja la lógica de las sesiones de juego (nuevas o cargadas)
+- **Métodos principales**:
+  - `playNew()`: Ejecuta una nueva partida con loop continuo de rondas
+  - `playFromSaved()`: Reanuda una partida guardada
+  - `chooseStartingPlayer()`: Permite elegir quién comienza
+  - `handleGameEnd()`: Procesa el resultado de una partida (victoria o empate)
+
+#### **Board**
+- **Responsabilidad**: Gestiona el estado del tablero y la lógica del juego
+- **Métodos principales**:
+  - `makeMove()`: Registra un movimiento en el tablero
+  - `isValidMove()`: Valida si un movimiento es legal
+  - `checkWin()`: Verifica si hay un ganador
+  - `isFull()`: Comprueba si el tablero está lleno
+  - `print()`: Muestra el tablero con símbolos coloreados
+  - `getState()` / `setState()`: Gestiona el estado para guardar/cargar
+
+#### **Player**
+- **Responsabilidad**: Representa a un jugador y maneja su entrada
+- **Atributos**:
+  - `symbol`: El símbolo del jugador (X u O)
+  - `name`: Nombre del jugador (Jugador 1 o Jugador 2)
+- **Métodos**:
+  - `makeMove()`: Solicita y valida la entrada del jugador
+
+#### **ScoreManager**
+- **Responsabilidad**: Gestiona las puntuaciones y su persistencia
+- **Métodos principales**:
+  - `incrementPlayer1Wins()`: Incrementa victorias del Jugador 1
+  - `incrementPlayer2Wins()`: Incrementa victorias del Jugador 2
+  - `incrementDraws()`: Incrementa contador de empates
+  - `display()`: Muestra la tabla de puntuaciones
+  - `save()` / `load()`: Guarda y carga puntuaciones desde `scores.txt`
+
+#### **SaveGameManager**
+- **Responsabilidad**: Gestiona el guardado y carga de partidas
+- **Métodos principales**:
+  - `save()`: Guarda una nueva partida
+  - `update()`: Actualiza una partida existente o crea una nueva
+  - `load()`: Carga una partida por índice
+  - `list()`: Lista todas las partidas guardadas
+  - `deleteGame()`: Elimina una partida guardada
+  - `manage()`: Interfaz para gestionar partidas guardadas
+
+#### **Color** (Clase de utilidad)
+- **Responsabilidad**: Proporciona funciones para colorear texto en terminal
+- **Métodos estáticos**:
+  - `rojo()`: Retorna texto en color rojo (para X)
+  - `azul()`: Retorna texto en color azul (para O)
+  - `reset()`: Resetea el color del terminal
+
+### Estructuras de Datos
+
+#### **GameState**
+- Almacena el estado completo de una partida:
+  - `board`: Vector con el estado del tablero
+  - `currentPlayer`: Símbolo del jugador actual
+  - `p1Symbol` / `p2Symbol`: Símbolos asignados a cada jugador
+  - `player1Symbol`: Símbolo original del Jugador 1
+  - `name`: Nombre de la partida
+
+#### **Score**
+- Almacena las puntuaciones:
+  - `player1Wins`: Victorias del Jugador 1
+  - `player2Wins`: Victorias del Jugador 2
+  - `draws`: Cantidad de empates
+
+---
+
 ##  Contribuciones
 
 
