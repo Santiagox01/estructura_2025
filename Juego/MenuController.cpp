@@ -16,15 +16,14 @@ int MenuController::showMainMenu() {
     cout << "  1️⃣  Nueva Partida\n";
     cout << "  2️⃣  Cargar Partida Guardada\n";
     cout << "  3️⃣  Gestionar Partidas Guardadas\n";
-    cout << "  4️⃣  Ver Puntuaciones\n";
-    cout << "  5️⃣  Instrucciones\n";
-    cout << "  6️⃣  Salir\n\n";
+    cout << "  4️⃣  Instrucciones\n";
+    cout << "  5️⃣  Salir\n\n";
     cout << "Selecciona una opción: ";
     
-    while (!(cin >> option) || option < 1 || option > 6) {
+    while (!(cin >> option) || option < 1 || option > 5) {
         cin.clear();
         cin.ignore(1000, '\n');
-        cout << "Opción inválida. Por favor elige entre 1 y 6: ";
+        cout << "Opción inválida. Por favor elige entre 1 y 5: ";
     }
     cin.ignore(1000, '\n');
     return option;
@@ -38,7 +37,7 @@ void MenuController::showInstructions() {
     cout << "🎯 OBJETIVO:\n";
     cout << "   Alinea tres símbolos en horizontal, vertical o diagonal\n\n";
     cout << "🎮 CÓMO JUGAR:\n";
-    cout << "   1. Elige tu símbolo (X o O)\n";
+    cout << "   1. Elige quién comienza la partida\n";
     cout << "   2. Los jugadores se turnan para elegir casillas\n";
     cout << "   3. Ingresa un número del 1 al 9 según el tablero:\n\n";
     cout << "      1 | 2 | 3\n";
@@ -47,9 +46,9 @@ void MenuController::showInstructions() {
     cout << "      ---------\n";
     cout << "      7 | 8 | 9\n\n";
     cout << "   4. Durante el juego puedes escribir 'guardar' para guardar la partida\n\n";
-    cout << "🎨 COLORES:\n";
-    cout << "   " << Color::rojo("X = Jugador 1 (Rojo)") << "\n";
-    cout << "   " << Color::azul("O = Jugador 2 (Azul)") << "\n\n";
+    cout << "🎨 SÍMBOLOS:\n";
+    cout << "   " << Color::rojo("X") << " = Jugador 1 (Rojo)\n";
+    cout << "   " << Color::azul("O") << " = Jugador 2 (Azul)\n\n";
     cout << "Presiona ENTER para continuar...";
     cin.get();
 }
@@ -97,12 +96,9 @@ void MenuController::run() {
             saveManager.manage();
         }
         else if (option == 4) {
-            scoreManager.display();
-        }
-        else if (option == 5) {
             showInstructions();
         }
-        else if (option == 6) {
+        else if (option == 5) {
             cout << "\n¡Hasta pronto! 👋\n";
             break;
         }

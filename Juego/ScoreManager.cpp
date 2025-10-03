@@ -30,8 +30,8 @@ void ScoreManager::display() const {
     cout << "╔════════════════════════════════════════╗\n";
     cout << "║         📊 TABLA DE PUNTUACIONES       ║\n";
     cout << "╚════════════════════════════════════════╝\n\n";
-    cout << Color::rojo("  Jugador 1 (X)") << ": " << currentScore.player1Wins << " victorias\n";
-    cout << Color::azul("  Jugador 2 (O)") << ": " << currentScore.player2Wins << " victorias\n";
+    cout << "  Jugador 1: " << currentScore.player1Wins << " victorias\n";
+    cout << "  Jugador 2: " << currentScore.player2Wins << " victorias\n";
     cout << "  Empates: " << currentScore.draws << "\n\n";
     cout << "Presiona ENTER para continuar...";
     cin.get();
